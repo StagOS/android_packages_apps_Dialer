@@ -45,4 +45,9 @@
     <string name="incall_dnd_dialog_message">In order to enable Do Not Disturb, the Phone app needs to be granted the permission to control the Do Not Disturb status.\nPlease allow it.</string>
     <string name="allow">Allow</string>
     <string name="deny">Deny</string>
+
+    <!-- Smart Options -->
+    <string name="smart_category_title">Gestures</string>
+    <string name="smart_mute_title">Smart mute</string>
+    <string name="smart_mute_summary">Mute the incoming call by flipping the device</string>
 </resources>
