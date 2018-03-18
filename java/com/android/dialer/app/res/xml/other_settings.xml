@@ -28,6 +28,11 @@
         android:title="@string/fullscreen_caller_photo_title"
         android:summary="@string/fullscreen_caller_photo_summary"
         android:defaultValue="false" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="incall_enable_dnd"
+        android:title="@string/incall_enable_dnd_title"/>
 				    
   <PreferenceCategory
         android:key="@string/call_recording_category_key"
