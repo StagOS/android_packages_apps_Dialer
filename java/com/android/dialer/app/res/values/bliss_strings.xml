@@ -18,4 +18,9 @@
     <string name="enable_post_call_title">Post call snackbar</string>
     <string name="enable_post_call_summary">Enable post call notifications at the bottom of screen</string>
 
+    <!-- Full Screen Caller Photo -->
+    <string name="fullscreen_caller_photo_title">Fullscreen photo</string>
+    <string name="fullscreen_caller_photo_summary">Display full-screen photo in incoming and outgoing calls</string>
+    <string name="fullscreen_caller_photo_message">To use, you must restart the application</string>
+
 </resources>
