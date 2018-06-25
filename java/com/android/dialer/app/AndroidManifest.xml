@@ -78,8 +78,12 @@
       android:theme="@style/DialtactsTheme">
     </activity>
 
-    <receiver android:name="com.android.dialer.app.calllog.CallLogReceiver"
-        android:exported="true">
+    <activity android:name="com.android.dialer.app.AccountSelectionActivity"
+      android:theme="@style/TransparentTheme"
+      android:exported="false" />
+
+    <receiver android:name="com.android.dialer.app.calllog.CallLogReceiver">
+      android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.NEW_VOICEMAIL"/>
         <data
