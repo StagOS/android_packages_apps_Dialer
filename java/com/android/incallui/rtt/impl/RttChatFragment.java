@@ -379,6 +379,15 @@ public class RttChatFragment extends Fragment
   }
 
   @Override
+  public void setCallRecordingState(boolean isRecording) {}
+
+  @Override
+  public void setCallRecordingDuration(long durationMs) {}
+
+  @Override
+  public void requestCallRecordingPermissions(String[] permissions) {}
+
+  @Override
   public void updateButtonStates() {}
 
   @Override
