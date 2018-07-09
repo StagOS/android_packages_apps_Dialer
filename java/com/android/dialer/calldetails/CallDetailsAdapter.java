@@ -28,6 +28,7 @@ import com.android.dialer.calldetails.CallDetailsHeaderViewHolder.CallDetailsHea
 import com.android.dialer.calllogutils.CallTypeHelper;
 import com.android.dialer.calllogutils.CallbackActionHelper;
 import com.android.dialer.calllogutils.CallbackActionHelper.CallbackAction;
+import com.android.dialer.callrecord.CallRecordingDataStore;
 import com.android.dialer.common.Assert;
 import com.android.dialer.dialercontact.DialerContact;
 import com.android.dialer.duo.DuoComponent;
@@ -45,6 +46,7 @@ final class CallDetailsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
   private final CallDetailsFooterViewHolder.ReportCallIdListener reportCallIdListener;
   private final DeleteCallDetailsListener deleteCallDetailsListener;
   private final CallTypeHelper callTypeHelper;
+  private final CallRecordingDataStore callRecordingDataStore;
   private List<CallDetailsEntry> callDetailsEntries;
 
   CallDetailsAdapter(
@@ -53,12 +55,14 @@ final class CallDetailsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
       @NonNull List<CallDetailsEntry> callDetailsEntries,
       CallDetailsHeaderListener callDetailsHeaderListener,
       CallDetailsFooterViewHolder.ReportCallIdListener reportCallIdListener,
-      DeleteCallDetailsListener deleteCallDetailsListener) {
+      DeleteCallDetailsListener deleteCallDetailsListener, 
+      CallRecordingDataStore callRecordingDataStore) {
     this.contact = Assert.isNotNull(contact);
     this.callDetailsEntries = callDetailsEntries;
     this.callDetailsHeaderListener = callDetailsHeaderListener;
     this.reportCallIdListener = reportCallIdListener;
     this.deleteCallDetailsListener = deleteCallDetailsListener;
+    this.callRecordingDataStore = callRecordingDataStore;
     callTypeHelper = new CallTypeHelper(context.getResources(), DuoComponent.get(context).getDuo());
   }
 
@@ -98,6 +102,7 @@ final class CallDetailsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
           contact.getNumber(),
           entry,
           callTypeHelper,
+          callRecordingDataStore,
           !entry.getHistoryResultsList().isEmpty() && position != getItemCount() - 2);
     }
   }

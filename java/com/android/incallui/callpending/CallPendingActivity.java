@@ -274,6 +274,9 @@ public class CallPendingActivity extends FragmentActivity
           @Override
           public void setAudioRoute(int route) {}
 
+	  @Override
+	  public void callRecordClicked(boolean checked) {}
+
           @Override
           public void onEndCallClicked() {}
 

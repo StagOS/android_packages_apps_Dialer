@@ -35,8 +35,9 @@ import java.lang.annotation.RetentionPolicy;
   InCallButtonIds.BUTTON_MERGE,
   InCallButtonIds.BUTTON_PAUSE_VIDEO,
   InCallButtonIds.BUTTON_MANAGE_VIDEO_CONFERENCE,
-  InCallButtonIds.BUTTON_MANAGE_VOICE_CONFERENCE,
+  InCallButtonIds.BUTTON_MANAGE_VOICE_CONFERENCE,  
   InCallButtonIds.BUTTON_SWITCH_TO_SECONDARY,
+  InCallButtonIds.BUTTON_RECORD_CALL,
   InCallButtonIds.BUTTON_SWAP_SIM,
   InCallButtonIds.BUTTON_COUNT,
 })
@@ -56,6 +57,7 @@ public @interface InCallButtonIds {
   int BUTTON_MANAGE_VIDEO_CONFERENCE = 11;
   int BUTTON_MANAGE_VOICE_CONFERENCE = 12;
   int BUTTON_SWITCH_TO_SECONDARY = 13;
-  int BUTTON_SWAP_SIM = 14;
-  int BUTTON_COUNT = 15;
+  int BUTTON_RECORD_CALL = 14;
+  int BUTTON_SWAP_SIM = 15;
+  int BUTTON_COUNT = 16;
 }
