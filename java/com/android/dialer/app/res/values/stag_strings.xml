@@ -46,4 +46,9 @@
     <string name="auto_answer_delay_title">Autoanswer delay</string>
     <string name="auto_answer_dialog_title">Autoanswer delay in (ms)</string>
     <string name="auto_answer_delay_summary">Autoanswer will be activated in <xliff:g id="number">%d</xliff:g> ms</string>
+
+    <!-- Smart Options -->
+    <string name="smart_category_title">Gestures</string>
+    <string name="smart_mute_title">Smart mute</string>
+    <string name="smart_mute_summary">Mute the incoming call by flipping the device</string>
 </resources>
