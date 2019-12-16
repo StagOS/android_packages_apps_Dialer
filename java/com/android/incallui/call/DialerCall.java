@@ -171,7 +171,6 @@ public class DialerCall implements VideoTechListener, StateChangedListener, Capa
 
   @Nullable private SpamStatus spamStatus;
   private boolean isBlocked;
-  private boolean isOutgoing;
 
   private boolean didShowCameraPermission;
   private boolean didDismissVideoChargesAlertDialog;
@@ -901,18 +900,12 @@ public class DialerCall implements VideoTechListener, StateChangedListener, Capa
           logState.dialerConnectTimeMillisElapsedRealtime == 0
               ? 0
               : SystemClock.elapsedRealtime() - logState.dialerConnectTimeMillisElapsedRealtime;
-    } else if (state == DialerCallState.DIALING || state == DialerCallState.CONNECTING) {
-      isOutgoing = true;
     }
   }
 
   @VisibleForTesting
   void setClock(Clock clock) {
     this.clock = clock;
-  }
-
-  public boolean isOutgoing() {
-    return isOutgoing;
   }
 
   public int getNumberPresentation() {
