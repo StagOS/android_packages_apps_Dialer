@@ -57,7 +57,7 @@ EXCLUDE_RESOURCE_DIRECTORIES := \
 	java/com/android/incallui/maps/impl/res \
 
 # All Dialers resources.
-RES_DIRS := $(call all-subdir-named-dirs,res,.)
+RES_DIRS := $(call all-subdir-named-dirs,res,.) dark-res
 RES_DIRS := $(filter-out $(EXCLUDE_RESOURCE_DIRECTORIES),$(RES_DIRS))
 
 EXCLUDE_MANIFESTS := \
